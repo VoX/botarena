@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>botarena</title>
+    <style>
+      html, body { margin: 0; padding: 0; height: 100%; background: #0a0a0a; overflow: hidden; font-family: monospace; color: #ddd; }
+      #app { width: 100vw; height: 100vh; }
+      #fps { position: fixed; top: 6px; left: 8px; font-size: 12px; color: #6f6; pointer-events: none; }
+      #hud { position: fixed; inset: 0; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="fps">fps: --</div>
+    <div id="hud"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
