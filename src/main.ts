@@ -1,6 +1,9 @@
 import * as THREE from 'three';
 import { initPhysics, stepPhysics } from './physics';
 import { buildArena } from './arena';
+import { initInput } from './input';
+import { mountHud } from './hud';
+import { initAudio } from './audio';
 
 const ARENA = 40;
 
@@ -33,6 +36,9 @@ scene.add(new THREE.AmbientLight(0x606080, 0.6));
 
 await initPhysics();
 buildArena(scene, ARENA);
+initInput(ARENA);
+mountHud();
+void initAudio();
 
 addEventListener('resize', () => {
   const a = innerWidth / innerHeight;
